@@ -50,6 +50,7 @@ import {
   regenerateKeySchema,
   signPaymentSchema,
   buyTokenSchema,
+  buybackSchema,
   createPlaybookSchema,
 } from "../src/lib/schemas.js";
 
@@ -163,6 +164,11 @@ const schemas = [
     name: "buyToken",
     schema: buyTokenSchema,
     routes: ["POST /api/talos/:id/buy-token"],
+  },
+  {
+    name: "buyback",
+    schema: buybackSchema,
+    routes: ["POST /api/talos/:id/revenue/buyback"],
   },
   {
     name: "createPlaybook",
